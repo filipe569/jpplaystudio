@@ -13,23 +13,23 @@ const DEFAULT_CONFIG = {
   heroDescription: "Planos de streaming a partir de R$ {price} ou monte seu negócio como revendedor. Qualidade 4K, suporte 24h e ativação imediata.",
   streamingSectionDescription: "Acesso imediato a canais, filmes e séries em qualidade 4K. Sem fidelidade, cancele quando quiser.",
   revendaSectionDescription: "3 sistemas diferentes para você escolher o modelo que melhor se encaixa no seu perfil. Painel completo e suporte dedicado.",
-  streamingMensal: "30",
+  streamingMensal: "35",
   streamingMensalDesc: "Acesso completo por 30 dias.",
-  streamingTrimestral: "65",
+  streamingTrimestral: "60",
   streamingTrimestralDesc: "Acesso completo por 90 dias.",
   streamingSemestral: "100",
   streamingSemestralDesc: "Acesso completo por 180 dias.",
   streamingAnual: "170",
   streamingAnualDesc: "Acesso completo por 365 dias.",
-  revendaMensalista: "350",
+  revendaMensalista: "150",
   revendaMensalistaDesc: "Acesso ao painel com criação ilimitada de revendas e clientes.",
-  revendaPrePagoCredito: "6",
+  revendaPrePagoCredito: "3",
   revendaPrePagoDesc: "Compre créditos e use conforme sua demanda. Sem mensalidade fixa.",
-  revendaPrePago10Creditos: "60,00",
-  revendaPrePago1Credito: "6,00",
+  revendaPrePago10Creditos: "30,00",
+  revendaPrePago1Credito: "3,00",
   revendaPosPagoAtivo: "4",
   revendaPosPagoAtivoFormatado: "4,00",
-  revendaPosPagoDesc: "Pague apenas pelos clientes ativos. Cobrança todo dia 8."
+  revendaPosPagoDesc: "Pague apenas pelos clientes ativos. Cobrança todo dia 10."
 };
 
 export default function Admin() {
