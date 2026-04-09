@@ -1,0 +1,30 @@
+{
+  "entities": {
+    "SiteConfig": {
+      "title": "Site Configuration",
+      "description": "Global configuration for the website including prices and contact info.",
+      "type": "object",
+      "properties": {
+        "whatsappNumber": { "type": "string" },
+        "siteName": { "type": "string" },
+        "streamingMensal": { "type": "string" },
+        "streamingTrimestral": { "type": "string" },
+        "streamingSemestral": { "type": "string" },
+        "streamingAnual": { "type": "string" },
+        "revendaMensalista": { "type": "string" },
+        "revendaPrePagoCredito": { "type": "string" },
+        "revendaPrePago10Creditos": { "type": "string" },
+        "revendaPrePago1Credito": { "type": "string" },
+        "revendaPosPagoAtivo": { "type": "string" },
+        "revendaPosPagoAtivoFormatado": { "type": "string" }
+      },
+      "required": ["whatsappNumber", "siteName"]
+    }
+  },
+  "firestore": {
+    "/config/{configId}": {
+      "schema": { "$ref": "#/entities/SiteConfig" },
+      "description": "Stores the global site configuration. Usually a single document named 'main'."
+    }
+  }
+}

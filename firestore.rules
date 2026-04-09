@@ -1,0 +1,26 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper Functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    function isAdmin() {
+      return isAuthenticated() && request.auth.token.email == "phillip.sukf@gmail.com";
+    }
+    function isValidConfig() {
+      return request.resource.data.keys().hasAll(['whatsappNumber', 'siteName']) &&
+             request.resource.data.whatsappNumber is string &&
+             request.resource.data.siteName is string;
+    }
+
+    match /config/{configId} {
+      // Anyone can read the config to display the site
+      allow read: if true;
+      // Only admin can create or update the config
+      allow create: if isAdmin() && isValidConfig();
+      allow update: if isAdmin() && isValidConfig();
+      allow delete: if false;
+    }
+  }
+}
